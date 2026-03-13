@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Vow Planner</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/Ring_Small.png" alt="Vow Planner Logo" class="logo-icon">
+                <span>Vow Planner</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="support.html" class="active">Support</a>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Support</h1>
+            <p>We're here to help you make the most of Vow Planner.</p>
+        </div>
+    </section>
+
+    <section class="support-intro">
+        <div class="container">
+            <p>Whether you're planning your dream wedding or troubleshooting an issue, our support team is here to assist you. Below, you'll find answers to common questions and ways to get in touch with us. Let's make sure your experience with Vow Planner is as smooth as possible.</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary>How do I reset my data?</summary>
+                <p>If you are having issues, you may need to go under your profile and select "Reset All Data." Before doing this, ensure you back up your data by exporting it, even if it is already backed up via iCloud sync.</p>
+            </details>
+            <details>
+                <summary>How do I export my data?</summary>
+                <p>Go to your profile settings and select "Export Data." Follow the prompts to save a copy of your data locally.</p>
+            </details>
+            <details>
+                <summary>What if the app isn't working properly?</summary>
+                <p>If you're experiencing issues, try restarting your device or redownloading the app from the App Store. This can often resolve unexpected glitches. Make sure your app is updated to the latest version.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <div class="container">
+            <h2>Contact Support</h2>
+            <p>If you can't find the answer you're looking for, feel free to reach out to us directly. Our team is here to help you with any questions or concerns.</p>
+            <!-- Use Formspree for free, open source-friendly form handling -->
+            <form action="https://formspree.io/f/mlgpljbd" method="POST" class="styled-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn-primary">Send</button>
+            </form>
+        </div>
+    </section>
+    <style>
+    .contact-form {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        background: #faf9f6;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        padding: 2rem 0;
+    }
+    .styled-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .styled-form label {
+        font-weight: 500;
+        margin-bottom: 0.3rem;
+        color: #333;
+    }
+    .styled-form input,
+    .styled-form textarea {
+        padding: 0.7rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-family: inherit;
+        background: #fff;
+        transition: border 0.2s;
+    }
+    .styled-form input:focus,
+    .styled-form textarea:focus {
+        border-color: #bfa46d;
+        outline: none;
+    }
+    .btn-primary {
+        background: #bfa46d;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .btn-primary:hover {
+        background: #a68b4c;
+    }
+    </style>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/Ring_Small.png" alt="Vow Planner Logo" class="footer-icon">
+                    <span>Vow Planner</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="support.html">Support</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Vow Planner. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
