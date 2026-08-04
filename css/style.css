@@ -72,7 +72,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu {
     display: flex;
-    gap: 30px;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
 .nav-menu a {
@@ -105,7 +106,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
 }
 
-/* Hero section – decorative background is the main backing (covers the old white/cream) */
 .hero {
     padding: 160px 0 100px;
     background-image: url('../images/hero-background-v01-01.png');
@@ -115,7 +115,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-/* Very light overlay only for text readability – does not wipe out the background */
 .hero::before {
     content: '';
     position: absolute;
@@ -183,10 +182,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-/*
-   Couple photo sits ON TOP of the decorative background.
-   The background fills the entire card so no plain white shows behind/around the photo.
-*/
 .hero-image {
     position: relative;
     border-radius: 24px;
@@ -196,7 +191,6 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* No large white padding – background is the backing */
     padding: 0;
 }
 
@@ -207,7 +201,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 24px;
     position: relative;
     z-index: 1;
-    /* Slight blend so any hard white edges of the photo are softened by the bg underneath */
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
@@ -252,9 +245,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-icon {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
     margin-bottom: 24px;
+    object-fit: contain;
 }
 
 .feature-card h3 {
@@ -267,6 +261,54 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-light);
     font-size: 15px;
     line-height: 1.7;
+}
+
+/* Lifestyle / editorial grid */
+.lifestyle-section {
+    padding: 80px 0 100px;
+    background: var(--cream);
+}
+
+.lifestyle-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.lifestyle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.lifestyle-card {
+    margin: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lifestyle-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(212, 175, 55, 0.18);
+}
+
+.lifestyle-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.lifestyle-card figcaption {
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-align: center;
 }
 
 .download-section {
@@ -317,24 +359,6 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     max-width: 160px;
     height: auto;
-}
-
-.app-store-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
-.app-store-btn span {
-    font-size: 14px;
-    color: var(--text-light);
-}
-
-.app-store-text {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--text-dark);
 }
 
 .price-info {
@@ -395,7 +419,6 @@ footer {
     color: var(--primary-color);
 }
 
-/* Social media links */
 .footer-social {
     display: flex;
     align-items: center;
@@ -436,12 +459,6 @@ footer {
     width: 20px;
     height: 20px;
     fill: currentColor;
-}
-
-.social-link span {
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
 }
 
 .footer-social-label {
@@ -508,10 +525,6 @@ footer {
     flex-direction: row-reverse;
 }
 
-.feature-detail-content {
-    flex: 1;
-}
-
 .feature-detail-content h2 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -537,10 +550,6 @@ footer {
 
 .feature-detail-content ul li strong {
     color: var(--text-dark);
-}
-
-.feature-detail-image {
-    flex: 1;
 }
 
 .feature-detail-image img {
@@ -593,17 +602,113 @@ footer {
     color: var(--text-dark);
 }
 
+/* Social page */
+.social-hero-banner {
+    padding: 0 0 40px;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+}
+
+.social-hero-img {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(212, 175, 55, 0.2);
+}
+
+.social-links-section {
+    padding: 60px 0 80px;
+    background: var(--white);
+}
+
+.social-links-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.social-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 36px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    background: var(--white);
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 14px 28px rgba(212, 175, 55, 0.15);
+}
+
+.social-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: var(--cream);
+}
+
+.social-card-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.social-card-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-dark);
+}
+
+.social-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.social-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 16px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.social-card-cta {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
 @media (max-width: 992px) {
     .hero h1 {
         font-size: 48px;
     }
-    
+
     .feature-detail-item {
         grid-template-columns: 1fr;
     }
-    
-    .feature-detail-item.reverse {
-        flex-direction: column;
+
+    .lifestyle-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -611,7 +716,7 @@ footer {
     .menu-toggle {
         display: flex;
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 80px;
@@ -625,24 +730,24 @@ footer {
         transition: transform 0.3s ease;
         z-index: 999;
     }
-    
+
     .nav-menu.active {
         transform: translateX(0);
     }
-    
+
     .hero {
         padding: 120px 0 60px;
     }
-    
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
+
     .hero h1 {
         font-size: 36px;
     }
-    
+
     .hero p {
         margin-left: auto;
         margin-right: auto;
@@ -651,33 +756,37 @@ footer {
     .app-download {
         align-items: center;
     }
-    
+
     .download-buttons {
         flex-direction: column;
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .features-section {
         padding: 60px 0;
     }
-    
+
+    .lifestyle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lifestyle-card img {
+        height: 200px;
+    }
+
     .features-detail {
         padding: 40px 0;
     }
-    
+
     .feature-detail-content h2 {
         font-size: 28px;
     }
-    
+
     .legal-page {
         padding: 60px 0;
-    }
-    
-    .footer-content {
-        flex-direction: column;
     }
 
     .footer-links {
