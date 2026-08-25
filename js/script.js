@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    if (!document.querySelector('link[href="css/extras.css"]')) {
+        const extra = document.createElement('link');
+        extra.rel = 'stylesheet';
+        extra.href = 'css/extras.css';
+        document.head.appendChild(extra);
+    }
+
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -14,13 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.addEventListener('click', function() {
             setMenu(!navMenu.classList.contains('active'));
         });
-
         navMenu.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                setMenu(false);
-            });
+            link.addEventListener('click', function() { setMenu(false); });
         });
-
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') setMenu(false);
         });
@@ -41,10 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const header = document.querySelector('.navbar');
         if (!header) return;
-        if (window.scrollY > 50) {
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.12)';
-        } else {
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
-        }
+        header.style.boxShadow = window.scrollY > 50
+            ? '0 2px 20px rgba(0, 0, 0, 0.12)'
+            : '0 2px 20px rgba(0, 0, 0, 0.08)';
     });
 });
