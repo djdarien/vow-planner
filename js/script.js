@@ -1,11 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    if (!document.querySelector('link[href="css/extras.css"]')) {
-        const extra = document.createElement('link');
-        extra.rel = 'stylesheet';
-        extra.href = 'css/extras.css';
-        document.head.appendChild(extra);
-    }
-
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 

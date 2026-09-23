@@ -23,3 +23,79 @@ a.logo:hover, a.footer-logo:hover { color: var(--primary-color); }
 .support-intro { padding: 2rem 0; }
 .support-intro p { max-width: 700px; margin: 0 auto; text-align: center; color: var(--text-light); font-size: 1.05rem; line-height: 1.7; }
 .faq-section h2 { text-align: center; margin-bottom: 1.5rem; }
+
+.hero-kicker {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.pillars-section {
+    padding: 48px 0;
+    background: var(--cream);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pillar-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 28px 24px;
+}
+
+.pillar-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.pillar-card p {
+    color: var(--text-light);
+    font-size: 15px;
+    margin: 0;
+}
+
+.founders-section {
+    padding: 72px 0;
+    background: var(--cream);
+    text-align: center;
+}
+
+.founders-section h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.founders-section p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.founders-section a {
+    color: var(--primary-dark);
+}
+
+.privacy-lead {
+    font-size: 17px;
+    color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+    .founders-section h2 {
+        font-size: 28px;
+    }
+}
