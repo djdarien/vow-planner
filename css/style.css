@@ -550,13 +550,6 @@ footer {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.feature-detail-image.app-screenshot img {
-    display: block;
-    max-width: 320px;
-    margin: 0 auto;
-    border-radius: 28px;
-}
-
 .legal-page {
     padding: 120px 0;
     background: var(--white);
