@@ -23,3 +23,4 @@ a.logo:hover, a.footer-logo:hover { color: var(--primary-color); }
 .support-intro { padding: 2rem 0; }
 .support-intro p { max-width: 700px; margin: 0 auto; text-align: center; color: var(--text-light); font-size: 1.05rem; line-height: 1.7; }
 .faq-section h2 { text-align: center; margin-bottom: 1.5rem; }
+@media (min-width: 769px) { .features-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
